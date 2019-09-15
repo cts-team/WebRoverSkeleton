@@ -1,0 +1,22 @@
+{
+    "name": "webrover/skeleton",
+    "type": "project",
+    "description": "WebRover Skeleton",
+    "keywords": ["php","framework","WebRover"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Mr moon",
+            "email": "createsmart@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "webrover/framework": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
