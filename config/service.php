@@ -80,7 +80,7 @@ return [
     ],
     'security' => [
         'encrypt' => [
-            'key' => config('app.secret'),
+            'key' => substr(config('app.secret'),7),
             'cipher' => 'AES-256-CBC'
         ]
     ],
