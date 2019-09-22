@@ -20,6 +20,7 @@ return [
         WebRover\Framework\Foundation\FoundationProvider::class,
         WebRover\Framework\Hashing\HashProvider::class,
         WebRover\Framework\Kernel\KernelProvider::class,
+        WebRover\Framework\Monolog\LoggerProvider::class,
         WebRover\Framework\Routing\RouterProvider::class,
         WebRover\Framework\Translator\TranslatorProvider::class,
         WebRover\Framework\View\ViewProvider::class,
