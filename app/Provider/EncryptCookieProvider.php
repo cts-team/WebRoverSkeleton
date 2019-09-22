@@ -3,7 +3,6 @@
 
 namespace App\Provider;
 
-
 use WebRover\Framework\Cookie\EncryptCookieProvider as ServiceProvider;
 
 /**

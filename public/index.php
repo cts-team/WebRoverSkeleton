@@ -1,12 +1,12 @@
 <?php
 
-use WebRover\Framework\Foundation\Request;
+use Symfony\Component\HttpFoundation\Request;
 
 require __DIR__ . '/../bootstrap/app.php';
 
 $kennel = new AppKernel('dev', true, __DIR__);
 
-$request = Request::capture();
+$request = Request::createFromGlobals();
 
 $response = $kennel->handle($request);
 

@@ -21,22 +21,18 @@ return [
         'options' => [
             'cache' => storage_path('framework/view'),
         ],
-        'extensions' => [
-            WebRover\Framework\View\Extension\AppExtension::class,
-            WebRover\Framework\View\Extension\AssetExtension::class,
-            WebRover\Framework\View\Extension\TranslatorExtension::class,
-        ]
+        'extensions' => []
     ],
     //缓存
     'cache' => [
         'default' => 'file',
+        'encrypt' => true,
         'stores' => [
             'file' => [
                 'driver' => 'file',
-                'prefix' => 'webrover_',
                 'path' => storage_path('app/cache')
             ],
-            'predis' => [
+            'redis' => [
                 'parameters' => [],
                 'options' => []
             ]
@@ -51,6 +47,12 @@ return [
     //附件
     'assets' => [
     ],
+    //加密
+    'encrypter' => [
+        'key' => config('app.secret'),
+        'cipher' => 'AES-256-CBC'
+    ],
+    //Session
     'session' => [
         'default' => 'file',
         'encrypt' => true,
@@ -76,12 +78,6 @@ return [
                 'connection' => '',
                 'options' => []
             ]
-        ]
-    ],
-    'security' => [
-        'encrypt' => [
-            'key' => substr(config('app.secret'),7),
-            'cipher' => 'AES-256-CBC'
         ]
     ],
     'logger' => [
