@@ -45,7 +45,7 @@ return [
         'cache_dir' => storage_path('app/translation')
     ],
     //附件
-    'assets' => [
+    'asset' => [
     ],
     //加密
     'encrypter' => [
